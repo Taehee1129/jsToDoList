@@ -84,7 +84,7 @@ function showNow(){
     const hour = date.getHours();
     const minute = date.getMinutes();
 
-    todaySection.innerText = `${year}-${month}-${today}`;
+    todaySection.innerText = `${year}-${month < 10 ? `0${month}` : month}-${today < 10 ? `0${today}` : today}`;
     clock.innerText = `${hour < 10 ? `0${hour}` : hour} : ${minute < 10 ? `0${minute}`: minute}`;
 }
 
